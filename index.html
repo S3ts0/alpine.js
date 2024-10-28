@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@alpinejs/sort@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <title>Alpine class="js"</title>
+  </head>
+  <body>
+    <h1 x-data="{ message: 'I ❤️ sunny days' }" x-text="message"></h1>
+    <div x-data="{ count: 0 }">
+      <button x-on:click="count--">Increment</button>
+
+      <span x-text="count"></span>
+    </div>
+    <div x-data="{ handle: (item, position) => { ... } }">
+      <ul x-sort="handle">
+        <li x-sort:item="1">foo</li>
+        <li x-sort:item="2">bar</li>
+        <li x-sort:item="3">baz</li>
+      </ul>
+    </div>
+  </body>
+</html>
